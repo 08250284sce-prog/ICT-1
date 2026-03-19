@@ -6,3 +6,4 @@ pi = 3.14
 print(type(pi))
 pi=int(pi)
 print(type(pi))
+print(pi)
