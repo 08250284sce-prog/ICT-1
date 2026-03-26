@@ -8,3 +8,4 @@ print("Logical OR:", result_or)
 
 result_not = not x
 print("Logical NOT:", result_not)
+print( x and y)
