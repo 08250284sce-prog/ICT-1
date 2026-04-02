@@ -19,4 +19,3 @@ if ndbl<= 30:
 else:
     pass
 print()    
-  
