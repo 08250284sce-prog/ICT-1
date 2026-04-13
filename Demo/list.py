@@ -16,8 +16,17 @@ Set_list = set(li)
 for x in Set_list:
     print(x)
 print()
-
-
+tup = ("John Smith", "Jane Doe", "Ailce Johnson")
+for x in tup:
+    print(x)
+set1 = {10, 30, 20}   
+for x in set1:
+    print(x)
+print()    
+BookDetails = dict({"python programming": "john simth","python fundamentals": "Alice johnson", "python interview questions":"jane doe"})
+for keys in BookDetails:
+    print(keys,BookDetails[keys])
+print()    
 
 
 
