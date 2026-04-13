@@ -1,54 +1,52 @@
-print()#printing an empty line for better readability
-student_list = [] #creating an empty list
-student_age = set()#creating an empty set
-student_grade = set()#creating an empty set
-student_dict = {}#creating an empty dictionary
+print()
+student_list = [] 
+student_age = set()
+student_grade = set()
+student_dict = {}
 
-student_list.append("Sonam")#adding student name to the list
-student_list.append("Kelzang")#adding student name to the list
-student_list.append("Pema")#adding student name to the list
-student_list.append("Dechen")#adding student name to the list
-student_age.add(24)#adding student age to the set
-student_age.add(28)#adding student age to the set
-student_age.add(25)#adding student age to the set
-student_age.add(27)#adding student age to the set
-student_grade.add('A')#adding student grade to the set
-student_grade.add('D')#adding student grade to the set
-student_grade.add('C')#adding student grade to the set
-student_grade.add('B')#adding student grade to the set
-student_dict['Sonam'] = {'age': 24, 'grade': 'A'}#adding student details to the dictionary
-student_dict['Kelzang'] = {'age': 28, 'grade': 'D'}#adding student details to the dictionary
-student_dict['Pema'] = {'age': 25, 'grade': 'C'}#adding student details to the dictionary
-student_dict['Dechen']= {'age': 27, 'grade': 'B'}#adding student details to the dictionary
+student_list.append("Sonam")
+student_list.append("Kelzang")
+student_list.append("Pema")
+student_list.append("Dechen")
+student_age.add(24)
+student_age.add(28)
+student_age.add(25)
+student_age.add(27)
+student_grade.add('A')
+student_grade.add('D')
+student_grade.add('C')
+student_grade.add('B')
+student_dict['Sonam'] = {'age': 24, 'grade': 'A'}
+student_dict['Kelzang'] = {'age': 28, 'grade': 'D'}
+student_dict['Pema'] = {'age': 25, 'grade': 'C'}
+student_dict['Dechen']= {'age': 27, 'grade': 'B'}
 
-add_student = input("Enter the student name to add or else enter to skip: ") #taking input for student name to be added to the existing list of students
-add_age = int(input("Enter the age of the student: ")) #taking input for student age to be added to the existing set of student ages and also to be added to the dictionary along with the student name
-add_grade = input("Enter the grade of the student: ") #taking input for student grade to be added to the existing set of student grades and also to be added to the dictionary along with the student name
-if add_student: #checking if the input for student name
-    student_list.append(add_student) #adding student name to the list
-    student_age.add(add_age) #adding student age to the set
-    student_grade.add(add_grade) #adding student grade to the set
-    student_dict[add_student] = {'age': add_age, 'grade': add_grade} #adding student details to the dictionary 
-    print(f"Student added successfully! The age of the student '{add_student}' is {student_dict[add_student]['age']} and the grade is {student_dict[add_student]['grade']}.")#printing the details of the new student added before
+add_student = input("Enter the student name to add or else enter to skip: ") 
+add_age = int(input("Enter the age of the student: ")) 
+add_grade = input("Enter the grade of the student: ") 
+if add_student: 
+    student_list.append(add_student) 
+    student_age.add(add_age)
+    student_grade.add(add_grade) 
+    student_dict[add_student] = {'age': add_age, 'grade': add_grade} 
+    print(f"Student added successfully! The age of the student '{add_student}' is {student_dict[add_student]['age']} and the grade is {student_dict[add_student]['grade']}.")
 else:
-    print("No student added")#printing the reminder if no student are added
-print()#printing a blank line
-search_name = input("Enter the student name to search: ")#taking input for student name to be searched in the existing list of students and also to be searched in the dictionary to get the details of the particular student if found
-if search_name in student_list: #checking if the input for student name is there in the existing list of students
-    print(f"Student found! The age of the student '{search_name}' is {student_dict[search_name]['age']} and the grade is {student_dict[search_name]['grade']}.") #printing the details of the student if found in the list and in the dictionary
-else: #another condition to be executed if the first condition is not satisfied
-    print("Student not found")#printing the reminder if the student is not found in the list and in the dictionary
-print()#printing a blank line
-remove_student = input("Enter the student name to remove or else enter to skip: ")#taking input for student name to be removed from the existing list of students and also to be removed from the dictionary along with the details of the particular student if found
-if remove_student in student_list: #checking if the input for student name is there in the existing list of students or not
-    remove_age = student_dict[remove_student] #getting the age of the student to be removed from the dictionary before removing the student from the list and from the dictionary
-    remove_grade = student_dict[remove_student] #getting the grade of the student to be removed from the dictionary before removing the student from the list and from the dictionary
-    student_list.remove(remove_student) #removing student name from the list
-    del student_dict[remove_student] #removing student details from the dictionary
+    print("No student added")
+print()
+search_name = input("Enter the student name to search: ")
+if search_name in student_list:
+    print(f"Student found! The age of the student '{search_name}' is {student_dict[search_name]['age']} and the grade is {student_dict[search_name]['grade']}.") 
+    print("Student not found")
+    print()
+    remove_student = input("Enter the student name to remove or else enter to skip: ")
+    remove_age = student_dict[remove_student] 
+    remove_grade = student_dict[remove_student] 
+    student_list.remove(remove_student) 
+    del student_dict[remove_student] 
 
-    print("Student removed successfully!") #printing the message of success if the student is removed successfully
-    print("Students left along with their details: ", student_dict) #printing the details of the remaining students after removing the particular student from the dictionary
-    print("List of students left: ", student_list) #printing the list of remaining students after removing the particular student from the list
-else: #setting the second condition to be executed if the first condition is not satisfied
-    print("Student not found") #printing the message of successfully excuting the second condition
-print()#printing a blank line
+    print("Student removed successfully!") 
+    print("Students left along with their details: ", student_dict) 
+    print("List of students left: ", student_list) 
+else: 
+    print("Student not found") 
+print()
