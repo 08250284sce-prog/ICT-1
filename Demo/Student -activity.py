@@ -7,5 +7,5 @@ def pattern(n):
     for i in range(n):
         print(" * ", end=" ")
     print()
-n=(int(input("Enter a number: ")))
+pattern(int(input("Enter a number: ")))
 print()
